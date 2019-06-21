@@ -1,3 +1,107 @@
-body{
-    background-color: #bada55;
+*{
+  margin: 0;
+  padding: 0;
 }
+
+$mobile: "(min-width: 300px) and (max-width: 450px)"; 
+$tablet: "(min-width: 450px) and (max-width: 720px)";
+$laptop: "(min-width: 720px) and (max-width: 1024px)";
+
+@font-face {
+  font-family: AdlerFont;
+  src: url(../css/ef_conv_zip_G_A_zO86MDAAZvau1f6dMAeF/adler.woff2);
+  }
+
+//Header
+
+ div#Logo{
+margin-top: 15px;
+background-image: url("../css/sn600.png");
+background- // add media rózne szerokosci 
+}
+
+h1{
+  color: white;
+  font-family: AdlerFont;
+  size: 40px;
+  
+}
+
+
+//Body 
+body{
+    background-image: url("../img/bird-s-eye-view-black-and-white-colors-450055.jpg");
+    height: auto;
+    width: auto;
+}
+
+
+section{
+  color: white;
+  font-family: AdlerFont;
+
+}
+
+@media only screen and (min-width: 320px) {
+    aside {
+      width: 20%;
+      float: left;
+    }
+  }
+
+.blocks {
+  font-size: 0;
+  .block {
+    font-size: 72px;
+    width: 25%;
+    height: 100vh;
+    
+
+    display: block;
+    &:last-of-type {
+      display: none;
+    }
+
+    
+
+    @media #{$laptop} {
+      display: none;
+      &:last-of-type,
+      &:first-of-type {
+        display: inline-block;
+      }
+    }
+
+    @media #{$tablet} {
+      display: inline-block;
+      &:last-of-type {
+        display: inline-block;
+      }
+      &:first-of-type {
+        display: none;
+      }
+    }
+
+    @media #{$mobile} {
+      display: none;
+      &:last-of-type,
+      &:first-of-type {
+        display: inline-block;
+
+      }
+    }
+  }
+}
+
+
+
+//section {
+  // display:flex}
+  // section div {
+  //   ostylowanie dla divów 
+
+  // }
+
+  // div {
+  //   ostylowanie dla divów dla konkretnego obrazka 
+  // }
